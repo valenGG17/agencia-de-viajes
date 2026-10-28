@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rumbo Sur Viajes — Vuelos, paquetes y hoteles</title>
+<link rel="stylesheet" href="styles.css"></head><body>
+<header><a class="logo" href="#top">✈ Rumbo Sur Viajes</a>
+<nav><a href="#buscar">Buscar</a><a href="#paquetes">Paquetes</a><a href="#servicios">Servicios</a><a href="#cotizar">Cotizar</a><a href="#agencia">Agencia</a><a href="#blog">Guías</a><a href="#legal">Condiciones</a></nav>
+<a class="btn s" href="#cotizar" style="padding:8px 14px">Cotizar</a></header>
+
+<section class="hero" id="top"><div>
+<h1>Tu próximo viaje, bien armado y sin sorpresas.</h1>
+<p>Vuelos, paquetes, hoteles, traslados y asistencia al viajero. Compará, cotizá y reservá en minutos, con asesores reales que te acompañan antes, durante y después.</p>
+<div class="card search" id="buscar">
+<div class="tabs"><button class="on" data-t="v">✈ Vuelos</button><button data-t="p">🏝 Paquetes</button></div>
+<form id="fs" onsubmit="return false"><div class="g">
+<div><label>Origen</label><select id="or"><option>Buenos Aires (EZE)</option><option>Córdoba (COR)</option><option>Rosario (ROS)</option><option>Mendoza (MDZ)</option></select></div>
+<div><label>Destino</label><select id="de"></select></div>
+<div><label>Ida</label><input type="date" id="d1"></div>
+<div id="wr"><label>Vuelta</label><input type="date" id="d2"></div>
+<div><label>Pasajeros</label><select id="px"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
+<div style="align-self:end"><button class="btn" id="go" style="width:100%">Buscar</button></div></div></form>
+<div class="res" id="res" aria-live="polite"></div>
+<p class="mu">Tarifas y disponibilidad de ejemplo; se confirman con un asesor antes del pago.</p></div></div></section>
+
+<section id="paquetes"><h2>Paquetes y ofertas</h2><p class="mu">Precios por persona, base doble, impuestos incluidos.</p>
+<div class="chips" id="chips"></div><div class="grid" id="pk"></div></section>
+
+<section id="servicios"><h2>Qué vendemos</h2><div class="grid">
+<div class="card sv"><div class="ic">🎫</div><h3>Tiquetes aéreos</h3><p class="mu">Vuelos nacionales e internacionales, sueltos, ida o ida y vuelta.</p></div>
+<div class="card sv"><div class="ic">🧳</div><h3>Paquetes turísticos</h3><p class="mu">Aéreo + hotel + excursiones, con itinerario cerrado.</p></div>
+<div class="card sv"><div class="ic">🏨</div><h3>Hoteles</h3><p class="mu">Alojamiento solo o con desayuno, desde hostels hasta resorts.</p></div>
+<div class="card sv"><div class="ic">🚐</div><h3>Traslados</h3><p class="mu">Aeropuerto–hotel privados o compartidos.</p></div>
+<div class="card sv"><div class="ic">🛡</div><h3>Seguro de viaje</h3><p class="mu">Asistencia médica, equipaje y cancelación.</p></div></div></section>
+
+<section id="cotizar"><div class="card"><h2>Pedí tu presupuesto personalizado</h2>
+<p class="mu">Respondemos en menos de 24 h. Si preferís, escribinos directo por WhatsApp.</p>
+<form id="fq" onsubmit="return false"><div class="g">
+<div><label>Nombre *</label><input id="qn" autocomplete="name" required></div><div><label>Teléfono / WhatsApp *</label><input id="qt" type="tel" inputmode="tel" autocomplete="tel" placeholder="+54 9 11 1234-5678" required><small class="mu">Con código de país. Es obligatorio para contactarte.</small></div>
+<div><label>Email (opcional)</label><input id="qe" type="email" autocomplete="email"></div><div><label>Destino</label><input id="qd" required></div>
+<div><label>Fecha aprox.</label><input id="qf" type="month"></div><div><label>Viajeros</label><input id="qp" type="number" min="1" value="2"></div></div>
+<label style="margin-top:12px">Comentarios</label><textarea id="qc" rows="3" placeholder="Presupuesto, intereses, hoteles…"></textarea>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px"><button class="btn" id="sq">Enviar solicitud</button><button class="btn o" id="wq">Enviar por WhatsApp</button></div></form><div id="qm"></div></div></section>
+
+<section id="agencia"><h2>Sobre nosotros</h2>
+<div class="grid"><div class="card"><h3>Agencia habilitada</h3><p>Rumbo Sur Viajes es una agencia de viajes y turismo con más de 12 años de trayectoria.</p>
+<p class="mu">Legajo EVT: <b>[completar]</b> · CUIT: <b>[completar]</b> · Miembro de FAEVYT: <b>[completar]</b></p></div>
+<div class="card"><h3>Contacto</h3><p>📍 Av. Ejemplo 1234, Buenos Aires<br>📞 +54 11 0000-0000<br>✉ hola@rumbosur.example<br>🕘 Lun–Vie 9–19 h · Sáb 10–14 h</p>
+<p class="mu">También atendemos 100 % online por chat y videollamada.</p></div></div>
+<h3 style="margin-top:32px">Lo que dicen nuestros viajeros</h3><div class="grid">
+<div class="card"><div class="st">★★★★★</div><p class="q">“Nos armaron Bariloche con todo resuelto. Cuando se canceló un vuelo, nos reprogramaron en horas.”</p><b>Lucía M.</b></div>
+<div class="card"><div class="st">★★★★★</div><p class="q">“Cotización clara, sin costos ocultos. Repetimos para Cancún.”</p><b>Martín y Sofía</b></div>
+<div class="card"><div class="st">★★★★☆</div><p class="q">“Muy buena atención por WhatsApp, respondieron enseguida.”</p><b>Carolina R.</b></div></div>
+<p class="mu">Testimonios de ejemplo: reemplazalos por reseñas reales de tus clientes.</p></section>
+
+<section id="blog"><h2>Guías y consejos de viaje</h2><div class="grid" id="bl"></div></section>
+
+<section id="legal"><h2>Condiciones y políticas</h2>
+<details><summary>Términos y condiciones de compra</summary><p>Los precios están expresados en la moneda indicada e incluyen los impuestos detallados en la cotización. La reserva se confirma con el pago de la seña (30 % del total) y el saldo se abona hasta 30 días antes de la salida. Las tarifas aéreas están sujetas a disponibilidad hasta la emisión.</p></details>
+<details><summary>Política de cancelación y reembolsos</summary><p>Paquetes: hasta 60 días antes, 10 % de gastos administrativos; entre 59 y 30 días, 30 %; menos de 30 días, 60 %–100 % según proveedores. Los tiquetes aéreos se rigen por las reglas de cada aerolínea. Recomendamos contratar seguro con cobertura de cancelación.</p></details>
+<details><summary>Cambios de itinerario</summary><p>Los cambios solicitados por el pasajero están sujetos a disponibilidad y diferencias tarifarias. Si la aerolínea o un proveedor modifica el servicio, te avisaremos y ofreceremos alternativas equivalentes o reembolso según la normativa vigente.</p></details>
+<details><summary>Protección de datos personales</summary><p>Usamos tus datos solo para cotizar, reservar y contactarte, conforme a la Ley 25.326. No los cedemos a terceros salvo los proveedores necesarios para tu viaje. Podés ejercer tus derechos de acceso, rectificación y supresión escribiendo a hola@rumbosur.example.</p></details>
+<p class="mu">Textos orientativos: revisalos con tu asesor legal antes de publicar.</p></section>
+
+<footer>© 2026 Rumbo Sur Viajes · Legajo EVT [completar] · <a href="#legal">Condiciones</a> · <a href="#cotizar">Contacto</a><br></footer>
+<a class="wa" id="wa" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+
+<div class="modal" id="m"><div class="card" id="mc"></div></div>
+
+<script src="app.js" defer></script></body></html>
